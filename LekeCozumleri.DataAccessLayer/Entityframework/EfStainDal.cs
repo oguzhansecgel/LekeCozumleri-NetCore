@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
+using LekeCozumleri.DtoLayer.Stain;
 
 namespace LekeCozumleri.DataAccessLayer.Entityframework
 {
@@ -19,11 +21,13 @@ namespace LekeCozumleri.DataAccessLayer.Entityframework
         {
         }
 
-        public List<Stain> getByStainWithCategory()
+        public List<Stain> GetByLast5Stain()
         {
             var context = new LekeContext();
-            var values = context.Staines.Include(x => x.category).ToList();
-            return values;
+            return context.Staines
+                   .OrderByDescending(s => s.StainId)
+                   .Take(5)
+                   .ToList();
         }
     }
 }

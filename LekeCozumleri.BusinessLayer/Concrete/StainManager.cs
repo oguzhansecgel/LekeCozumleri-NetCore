@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace LekeCozumleri.BusinessLayer.Concrete
 {
@@ -18,12 +19,12 @@ namespace LekeCozumleri.BusinessLayer.Concrete
             _stainDal = stainDal;
         }
 
-        public async Task TAddAsync(Stain entity)
+        public void TAddAsync(Stain entity)
         {
             _stainDal.AddAsync(entity);
         }
 
-        public async Task TDeleteAsync(Stain entity)
+        public void TDeleteAsync(Stain entity)
         {
             _stainDal.DeleteAsync(entity);
         }
@@ -33,9 +34,9 @@ namespace LekeCozumleri.BusinessLayer.Concrete
             return _stainDal.GetByID(id);
         }
 
-        public List<Stain> TgetByStainWithCategory()
+        public List<Stain> TGetByLast5Stain()
         {
-            return _stainDal.getByStainWithCategory();
+            return _stainDal.GetByLast5Stain();
         }
 
         public List<Stain> TGetListAll()
@@ -43,7 +44,7 @@ namespace LekeCozumleri.BusinessLayer.Concrete
             return _stainDal.GetListAll();
         }
 
-        public async Task TUpdateAsync(Stain entity)
+        public void TUpdateAsync(Stain entity)
         {
             _stainDal.UpdateAsync(entity);
         }

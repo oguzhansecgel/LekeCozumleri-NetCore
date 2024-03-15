@@ -22,20 +22,20 @@ namespace LekeCozumleri.DataAccessLayer.GenericRepository
         {
             return _context.Set<T>().ToList();
         }
-        public async Task AddAsync(T entity)
+        public void AddAsync(T entity)
         {
             _context.Add(entity);
             _context.SaveChanges();
         }
 
-        public async Task DeleteAsync(T entity)
+        public void DeleteAsync(T entity)
         {
             _context.Remove(entity);
             _context.SaveChanges();
         }
 
 
-        public async Task UpdateAsync(T entity)
+        public void UpdateAsync(T entity)
         {
             _context.Update(entity);
             _context.SaveChanges();

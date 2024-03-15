@@ -8,9 +8,9 @@ namespace LekeCozumleri.DataAccessLayer.Abstract
 {
     public interface IGenericDal<T> where T : class
     {
-        Task AddAsync(T entity);
-        Task DeleteAsync(T entity);
-        Task UpdateAsync(T entity);
+        void AddAsync(T entity);
+        void DeleteAsync(T entity);
+        void UpdateAsync(T entity);
         T GetByID(int id);
         List<T> GetListAll();
     }

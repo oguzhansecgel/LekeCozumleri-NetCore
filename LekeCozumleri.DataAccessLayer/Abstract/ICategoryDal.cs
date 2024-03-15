@@ -9,5 +9,6 @@ namespace LekeCozumleri.DataAccessLayer.Abstract
 {
     public interface ICategoryDal : IGenericDal<Category>
     {
+        public List<Stain> GetStainsByCategoryId(int categoryId);
     }
 }

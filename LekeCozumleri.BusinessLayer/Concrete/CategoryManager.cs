@@ -18,12 +18,12 @@ namespace LekeCozumleri.BusinessLayer.Concrete
             _categoryDal = categoryDal;
         }
 
-        public async Task TAddAsync(Category entity)
+        public void TAddAsync(Category entity)
         {
             _categoryDal.AddAsync(entity);
         }
 
-        public async Task TDeleteAsync(Category entity)
+        public void TDeleteAsync(Category entity)
         {
             _categoryDal.DeleteAsync(entity);
         }
@@ -38,7 +38,12 @@ namespace LekeCozumleri.BusinessLayer.Concrete
             return _categoryDal.GetListAll();
         }
 
-        public async Task TUpdateAsync(Category entity)
+        public List<Stain> TGetStainsByCategoryId(int categoryId)
+        {
+            return _categoryDal.GetStainsByCategoryId((int)categoryId);
+        }
+
+        public void TUpdateAsync(Category entity)
         {
             _categoryDal.UpdateAsync(entity);   
         }

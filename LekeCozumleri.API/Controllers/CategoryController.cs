@@ -31,6 +31,12 @@ namespace LekeCozumleri.API.Controllers
             var values = _categoryService.TGetByID(id);
             return Ok(values);
         }
+        [HttpGet("GetStainsByCategoryId")]
+        public IActionResult TGetStainsByCategoryId(int id) 
+        {
+            var values = _categoryService.TGetStainsByCategoryId(id);
+            return Ok(values);
+        }
         [HttpPost]
         public async Task<IActionResult> createCategory(CreateCategoryDto createCategoryDto)
         {

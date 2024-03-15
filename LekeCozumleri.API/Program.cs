@@ -3,6 +3,7 @@ using LekeCozumleri.BusinessLayer.Concrete;
 using LekeCozumleri.DataAccessLayer.Abstract;
 using LekeCozumleri.DataAccessLayer.Context;
 using LekeCozumleri.DataAccessLayer.Entityframework;
+using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
 

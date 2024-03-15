@@ -9,5 +9,6 @@ namespace LekeCozumleri.BusinessLayer.Abstract
 {
     public interface ICategoryService : IGenericService<Category>
     {
+        public List<Stain> TGetStainsByCategoryId(int categoryId);
     }
 }

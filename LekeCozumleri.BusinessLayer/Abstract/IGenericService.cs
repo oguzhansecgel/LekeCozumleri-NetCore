@@ -8,9 +8,9 @@ namespace LekeCozumleri.BusinessLayer.Abstract
 {
     public interface IGenericService<T> where T : class
     {
-        Task TAddAsync(T entity);
-        Task TDeleteAsync(T entity);
-        Task TUpdateAsync(T entity);
+        void TAddAsync(T entity);
+        void TDeleteAsync(T entity);
+        void TUpdateAsync(T entity);
         T TGetByID(int id);
         List<T> TGetListAll();
     }

@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Text.Json;
 
 namespace LekeCozumleri.BusinessLayer.Abstract
 {
     public interface IStainService : IGenericService<Stain>
     {
-        List<Stain> TgetByStainWithCategory();
+        public List<Stain> TGetByLast5Stain();
     }
 }
